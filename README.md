@@ -7,4 +7,4 @@
 
 In a group of four we were tasked to work for a veterinary hospital to manage a system owned by another company "HOSP".
 
-(assets/task-system.png)
+![Task system](assets/task-system.png)
