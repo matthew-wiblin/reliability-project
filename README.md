@@ -3,7 +3,6 @@
 </h1>
 
 ## Task / Introduction
----
 In a group of four (team - boop) we were tasked to work for a veterinary hospital to manage a system owned by another company "HOSP".
 Overview:
  - Preserve the functionality of the system.
@@ -22,8 +21,8 @@ Other information:
  - Ensure no security breaches.
  - ensure the system responds successfully to >99% of user requests.
 
-## Initial steps
 ---
+## Initial steps
 We set up a Trello board to keep track of all tickets and work that had been done or needed to be.
 Agreed on agile methodology to move forward as a team.
 Implemented security WAF protocols.
@@ -47,8 +46,8 @@ Results / findings:
  - Upon checking the API documentation, we found that the server had a small error rate in resolving 5xx errors and needed them to be retried.
  - We agreed that HTTP responses with 5xx errors needed to be retried at the server.
 
-## First attempt at improvements
 ---
+## First attempt at improvements
 After realising 5xx errors needed to be reverse proxied, we discussed potential options.
 
 One such option was a Lambda:
@@ -65,8 +64,8 @@ Explanation of failures:
  - Ultimately, we did not approach this in the right manner, starting with the basics and incrementally improving from there.
  - After we realised this was not working, we decided not to waste time further.
 
-## The Nginx reverse proxy
 ---
+## The Nginx reverse proxy
 We researched and decided to pursue an Nginx reverse proxy to troubleshoot our errors:
  - We set up a target group to redirect load balancer traffic through an EC2 instance.
  - This instance had nginx with a special configuration implemented.
@@ -83,6 +82,7 @@ Results:
  - This configuration retried the 5xx error messages and returned them back to the client.
  - We also implemented caching to reduce request times and unburden the web traffic system.
 
+---
 ## Final diagram
 
 Our final infrastructure outlined below:
