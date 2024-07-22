@@ -10,9 +10,9 @@ Overview:
  - Increase the reliability/security of the system.
  - Implement improvements to the system.
 
-
+<br>
 ![Task system](assets/task-system.png)
-
+<br>
 
 Other information:
  - All applications were hosted on AWS.
@@ -32,15 +32,15 @@ First started with gaining visibility over the system with logging:
  - Set an S3 bucket to collect logs.
  - Directed access logs from the load balancer to this bucket.
 
-
+<br>
 ![S3 bucket](assets/s3-screenshot)
-
+<br>
 
 Then to more easily view these logs, we set up Athena.
 
-
+<br>
 ![Athena](assets/athena-screenshot.png)
-
+<br>
 
 Results / findings:
  - We saw that there were multiple 5xx errors.
@@ -56,9 +56,9 @@ One such option was a Lambda:
  - This would parse HTTP responses and check for 5xx errors.
  - Ultimately this failed, but we learnt much along the way.
 
-
+<br>
 ![lambda](assets/lambda.png)
-
+<br>
 
 Explanation of failures:
  - Implementing a Lambda function like this could have been very powerful and useful if successful.
@@ -72,11 +72,11 @@ We researched and decided to pursue an Nginx reverse proxy to troubleshoot our e
  - This instance had nginx with a special configuration implemented.
  - We also adjusted the inbound rules for the instance to only accept traffic from the loadbalancer.
 
-
+<br>
 ![ec2's](assets/ec2-instances.png)
-
+<br>
 ![nginx](assets/nginx.png)
-
+<br>
 
 Results:
  - This configuration retried the 5xx error messages and returned them back to the client.
