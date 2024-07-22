@@ -9,8 +9,8 @@ Overview:
  - Preserve the functionality of the system.
  - Increase the reliability/security of the system.
  - Implement improvements to the system.
-
 <br>
+
 ![Task system](assets/task-system.png)
 <br>
 
@@ -31,14 +31,14 @@ Implemented security WAF protocols.
 First started with gaining visibility over the system with logging:
  - Set an S3 bucket to collect logs.
  - Directed access logs from the load balancer to this bucket.
-
 <br>
+
 ![S3 bucket](assets/s3-screenshot)
 <br>
 
 Then to more easily view these logs, we set up Athena.
-
 <br>
+
 ![Athena](assets/athena-screenshot.png)
 <br>
 
@@ -55,8 +55,8 @@ One such option was a Lambda:
  - We would set up a target group on the load balancer to redirect traffic through the Lambda.
  - This would parse HTTP responses and check for 5xx errors.
  - Ultimately this failed, but we learnt much along the way.
-
 <br>
+
 ![lambda](assets/lambda.png)
 <br>
 
@@ -71,10 +71,11 @@ We researched and decided to pursue an Nginx reverse proxy to troubleshoot our e
  - We set up a target group to redirect load balancer traffic through an EC2 instance.
  - This instance had nginx with a special configuration implemented.
  - We also adjusted the inbound rules for the instance to only accept traffic from the loadbalancer.
-
 <br>
+
 ![ec2's](assets/ec2-instances.png)
 <br>
+
 ![nginx](assets/nginx.png)
 <br>
 
