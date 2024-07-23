@@ -3,7 +3,7 @@
 </h1>
 
 ## Task / Introduction
-In a group of four (team - boop) we were tasked to work for a veterinary hospital to manage a system owned by another company "HOSP".
+In a group of four (team - 'boop') we were tasked to work for a veterinary hospital to manage a system owned by another company "HOSP".
 Overview:
  - Preserve the functionality of the system.
  - Increase the reliability/security of the system.
@@ -15,11 +15,11 @@ Overview:
 
 Other information:
  - All applications were hosted on AWS.
- - We had no access to source code or DNS resolution but we did have access to API documentation.
+ - We had no access to source code or DNS resolution but we did have access to API documentation (from HOSP).
  - Sole access to the load balancer only.
  - We could make requests/tickets to the HOSP team for information (small amount).
  - Ensure no security breaches.
- - ensure the system responds successfully to >99% of user requests.
+ - Ensure the system responds successfully to >99% of user requests.
 
 ---
 ## Initial steps
@@ -32,7 +32,7 @@ First started with gaining visibility over the system with logging:
  - Directed access logs from the load balancer to this bucket.
 <br>
 
-![S3 bucket](assets/s3-screenshot)
+![S3 bucket](assets/s3-screenshot.png)
 <br>
 
 Then to more easily view these logs, we set up Athena.
