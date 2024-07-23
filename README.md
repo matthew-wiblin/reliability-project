@@ -83,8 +83,14 @@ Results:
  - We also implemented caching to reduce request times and unburden the web traffic system.
 
 ---
-## Final diagram
+## Final results
 
 Our final infrastructure outlined below:
 
 ![diagram](assets/makers-proj-diagram.png)
+<br>
+
+This had achieved a good success rate:
+<br>
+
+![panel](assets/control-panel.png)
