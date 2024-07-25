@@ -1,5 +1,5 @@
 <h1 align="center">
-    Reliability Project - AWS
+    Reliability Project - AWS (Makers bootcamp)
 </h1>
 
 ## Task / Introduction
