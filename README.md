@@ -4,6 +4,7 @@
 
 ## Task / Introduction
 In a group of four (team - 'boop') we were tasked to work for a veterinary hospital to manage a system owned by another company "HOSP".
+
 Overview:
  - Preserve the functionality of the system.
  - Increase the reliability/security of the system.
